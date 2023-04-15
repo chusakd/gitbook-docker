@@ -13,9 +13,11 @@ This image can be used to build books with the GitBook CLI.
 
 To run gitbook with the current directory mounted to `/docs`:
 
-    $ docker run -ti --rm -v `pwd`:/docs humangeo/gitbook <path to your book>
+    $ docker run -ti --rm -v `pwd`:/docs chusakd/gitbook <path to your book>
 
 
 ### Use Case #2: Building a PDF
 
-    $ docker run -ti --rm -v `pwd`:/docs humangeo/gitbook pdf <path to your book>
+    $ docker run -ti --rm -v `pwd`:/docs chusakd/gitbook pdf <path to your book>
+### In case you don't want to remove docker container when stop service
+    $ docker run -ti -v `pwd`:/docs chusakd/gitbook pdf <path to your book>
